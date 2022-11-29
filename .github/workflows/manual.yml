@@ -22,6 +22,9 @@ jobs:
   greet:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test: [1, 2, 3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -32,18 +35,20 @@ jobs:
     - name: Clone repo
       uses: actions/checkout@v3
       
-    - name: List repo files and current wokring directory
+    - name: 1. List repo files and current wokring directory
       run: |
           ls
           pwd
 
-    - name: List root directory
+    - if: ${{ matrix.test === 1 }}
+      name: 2. List root directory
       run: |
           cd ..
           ls
           pwd
 
-    - name: List work directory
+    - name: 3. List work directory
+      if: ${{ matrix.test === 2 }}    
       run: |
           cd ..
           cd ..
