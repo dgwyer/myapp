@@ -40,7 +40,7 @@ jobs:
           ls
           pwd
 
-    - if: ${{ matrix.test === 1 }}
+    - if: ${{ matrix.test == 1 }}
       name: 2. List root directory
       run: |
           cd ..
@@ -48,7 +48,7 @@ jobs:
           pwd
 
     - name: 3. List work directory
-      if: ${{ matrix.test === 2 }}    
+      if: ${{ matrix.test == 2 }}    
       run: |
           cd ..
           cd ..
