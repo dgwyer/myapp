@@ -40,4 +40,5 @@ jobs:
     - name: List root directory
       run: |
           cd ..
+          ls
           pwd
