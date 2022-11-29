@@ -36,3 +36,8 @@ jobs:
       run: |
           ls
           pwd
+
+    - name: List root directory
+      run: |
+          cd ..
+          pwd
