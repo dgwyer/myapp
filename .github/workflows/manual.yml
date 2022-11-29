@@ -42,3 +42,9 @@ jobs:
           cd ..
           ls
           pwd
+
+    - name: List work directory
+      run: |
+          cd ..
+          ls
+          pwd
