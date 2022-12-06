@@ -35,6 +35,24 @@ jobs:
     - name: Clone repo
       uses: actions/checkout@v3
       
+      
+    - name: Cache npms
+      id: cache-npm
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+      
+    - name: Install npm dependencies
+      if: steps.cache-npm.outputs.cache-hit != 'true'
+      run: |
+        echo "Installing dependencies..."
+        npm i
+      
     - name: 1. List repo files and current wokring directory
       run: |
           ls
