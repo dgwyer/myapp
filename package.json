@@ -12,5 +12,5 @@
         "cypress": "^11.0.1",
         "tailwind-config-viewer": "^1.7.2",
         "webpack-dev-server": "^4.11.1"
-    },
+    }
 }
