@@ -3,4 +3,8 @@
 Test diagram generated via ta GitHub action.
 
 ![alt text](d2/svg/file.svg "Title")
-<img src="d2/svg/file.svg" width="200"/>
+<img src="d2/svg/file.svg" />
+
+<picture>
+  <img src="d2/svg/file.svg" />
+</picture>
