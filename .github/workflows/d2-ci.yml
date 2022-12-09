@@ -21,7 +21,7 @@ jobs:
         run: |
           d2 --help
           man d2
-          d2 file.d2
+          d2 d2/file.d2 d2/svg/file.d2
           ls
 
       - name: List compiled D2 files
