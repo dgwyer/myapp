@@ -11,19 +11,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
       - name: Install D2
+        run: sudo curl -fsSL https://d2lang.com/install.sh | sudo sh -s --
+
+      - name: Compile D2 files
         run: |
-          sudo curl -fsSL https://d2lang.com/install.sh | sudo sh -s --
-          #d2 --help
-          #man d2
+          d2 --help
+          man d2
           d2 file.d2
           ls
 
-      - name: Files added
+      - name: List compiled D2 files
         run: |
           git status
+          git ls-files --others --exclude-standard
 
       - name: Commit & Push
         uses: Andro999b/push@v1.3
