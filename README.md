@@ -1,5 +1,5 @@
-# myapp
+# D2 Test
 
-test repo
+Test diagram generated via ta GitHub action.
 
-added something else locally.
+<imag src="d2/svg/file.svg" />
