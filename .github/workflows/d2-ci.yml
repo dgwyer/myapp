@@ -15,6 +15,6 @@ jobs:
 
       - name: Install D2
         run: |
-          curl -fsSL https://d2lang.com/install.sh | sh -s --
+          sudo curl -fsSL https://d2lang.com/install.sh | sh -s --
           d2 --help
           man d2
