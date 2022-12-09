@@ -14,4 +14,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install D2
-        run: curl -fsSL https://d2lang.com/install.sh | sh -s -- --dry-run
+        run: |
+          curl -fsSL https://d2lang.com/install.sh | sh -s -- --dry-run
+          man d2
