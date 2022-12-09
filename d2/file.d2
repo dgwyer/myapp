@@ -1,16 +1,21 @@
 a: Extendify Plugin
 e: Airtable DB
 
-extendifyServer: Extendify Server {
-  dashboardServer: dashboard.extendiy.com {
+extendifyServer: {
+  label: Extendify Server
+
+  dashboardServer: {
+    label: dashboard.extendiy.com
     ls: Laravel Server
     cl: Cache Layer
 
     ls -> cl
   }
 
-  apiServer: api.extendiy.com/api/templates {
+  apiServer:  {
+    label: api.extendiy.com/api/templates
     nj: Next.js Server
+
     _.dashboardServer.ls -> nj
   }
 
