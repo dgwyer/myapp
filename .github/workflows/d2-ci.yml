@@ -1,8 +1,8 @@
 name: D2 CI
 
 # Todo:
-# - Process only D2 files that have been upated. Can we pass in a list of D2 files from the commit action?
-#   Can use this action: https://github.com/tj-actions/changed-files/
+# - Process only D2 files that have been upated.
+#   Can use this action to list changed files in the latest commit: https://github.com/tj-actions/changed-files/
 
 on:
   push:
