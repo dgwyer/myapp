@@ -1,7 +1,7 @@
 name: D2 CI
 
 on:
-  # push:
+  push:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,3 +20,6 @@ jobs:
           #man d2
           d2 file.d2
           ls
+          git add .
+          git commit -am 'add compiled D2 files to repo'
+          git push
