@@ -1,2 +1,18 @@
+a: Extendify Plugin
+b: Laravel Server
+c: Cache Layer
+d: Next.js Server
+e: Airtable DB
+
+extendifyServer: Extendify Server {
+  dashboardServer: dashboard.extendiy.com {
+    b -> c
+  }
+
+  apiServer: api.extendiy.com/api/templates {
+    d
+  }
+}
+
 x -> y: hello world
 x -> z: hello again
