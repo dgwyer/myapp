@@ -18,3 +18,4 @@ jobs:
           sudo curl -fsSL https://d2lang.com/install.sh | sudo sh -s --
           d2 --help
           man d2
+          d2 file.d2
