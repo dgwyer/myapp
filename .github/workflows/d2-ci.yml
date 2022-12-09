@@ -1,11 +1,12 @@
 name: D2 CI
 
-# Todo: Process only D2 files that have been upated. Can we pass in a list of D2 files from the commit action?
-# And then if manually triggered just process all D2 files.
+# Todo:
+# - Process only D2 files that have been upated. Can we pass in a list of D2 files from the commit action?
+#   Can use this action: https://github.com/tj-actions/changed-files/
 
 on:
   push:
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   build:
