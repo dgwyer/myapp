@@ -19,7 +19,9 @@ jobs:
         run: sudo curl -fsSL https://d2lang.com/install.sh | sudo sh -s --
 
       - name: Compile D2 files
-        run: d2 ./d2/file.d2 ./d2/svg/file.svg
+        run: |
+          rm ./d2/svg/file.svg
+          d2 ./d2/file.d2 ./d2/svg/file.svg
 
       - name: Commit & Push
         uses: Andro999b/push@v1.3
