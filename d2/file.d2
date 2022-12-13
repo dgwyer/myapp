@@ -20,10 +20,11 @@ extendifyServer: {
     # _.dashboardServer.ls -> nj
   }
 
-  dashboardServer -> apiServer
+  # dashboardServer -> apiServer
   # dashboardServer.ls -> apiServer.nj: Custom connector label
   dashboardServer.cl -> apiServer.nj: Refresh Airtable data manually
 }
 
 # a -> dashboardServer: API request
 a -> extendifyServer.dashboardServer.ls
+b -> extendifyServer.dashboardServer.nj
