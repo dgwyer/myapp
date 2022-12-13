@@ -1,13 +1,14 @@
 a: Extendify Plugin
-e: Airtable DB
+b: Airtable DB
 
 extendifyServer: {
   label: Extendify Server
 
   dashboardServer: {
     label: dashboard.extendiy.com
-    ls: Laravel Server1
+    ls: Laravel Server
     cl: Cache Layer
+    cl.shape: cylinder
 
     ls -> cl
   }
@@ -24,4 +25,5 @@ extendifyServer: {
   dashboardServer.cl -> apiServer.nj: Refresh Airtable data manually
 }
 
-a -> dashboardServer: API request
+# a -> dashboardServer: API request
+a -> extendifyServer.dashboardServer.ls
