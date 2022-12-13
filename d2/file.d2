@@ -16,13 +16,12 @@ extendifyServer: {
     label: api.extendiy.com/api/templates
     nj: Next.js Server
 
-    _.dashboardServer.ls -> nj: 2a see that
+    # _.dashboardServer.ls -> nj
   }
 
   dashboardServer -> apiServer
-  dashboardServer.ls -> apiServer.nj: 3b Custom connector label
+  # dashboardServer.ls -> apiServer.nj: Custom connector label
+  dashboardServer.cl -> apiServer.nj: Refresh Airtable data manually
 }
 
-a -> extendifyServer: API request
-x -> y: hello world
-x -> z: hello again
+a -> dashboardServer: API request
